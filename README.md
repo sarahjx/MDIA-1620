@@ -1,6 +1,6 @@
 # MDIA-1620
-Yay for MDIA 1620!
----------
+Sarah Wang D3 Set H - Yay for MDIA 1620! 
+---
 Here are **three Aha! moments** 😸
 
 1. Finding out I can put emojis on here🔥💯
@@ -9,18 +9,18 @@ Here are **three Aha! moments** 😸
 
 3. Learning about past interfaces and how they worked.
 
---------
+---
 Now here are **two things I'm unclear about...**
 
 1. How Github is incorporated while coding
 
 2. Coding in general 😿
 
---------
+---
 
 **One word for how I'm feeling: ~~sleepy~~ *Excited!*** 🎆🍾🥳
 
--------
+---
 
 Notes from class
 > Coding is possible in terminal but it's very hard and a steep learning curve (not worth it)
@@ -32,3 +32,9 @@ Notes from class
 > Course outline: 40% lab work 30% midterm exam 30% final exam
 
 > 1 point for attendance, 1 point for watching the video /12
+
+---
+
+**My favourite Sandwich!**
+
+![pesto sandwich yay](https://www.garnishandglaze.com/wp-content/uploads/2014/03/pestofeature.jpg)
