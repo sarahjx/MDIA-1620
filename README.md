@@ -19,3 +19,16 @@ Now here are **two things I'm unclear about...**
 --------
 
 **One word for how I'm feeling: ~~sleepy~~ *Excited!*** 🎆🍾🥳
+
+-------
+
+Notes from class
+> Coding is possible in terminal but it's very hard and a steep learning curve (not worth it)
+
+> Benefits of using Github: A graphical user interface to view and manage user control changes easily (visually appealing). 
+
+> Currently: we are currently coding with Markdown (a coding language) using Git. Not with "coding with Github." 
+
+> Course outline: 40% lab work 30% midterm exam 30% final exam
+
+> 1 point for attendance, 1 point for watching the video /12
