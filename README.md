@@ -18,4 +18,4 @@ Now here are **two things I'm unclear about...**
 
 --------
 
-**One word for how I'm feeling: ~~sleepy~~ *Excited!***
+**One word for how I'm feeling: ~~sleepy~~ *Excited!*** 🎆🍾🥳
