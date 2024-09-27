@@ -23,3 +23,4 @@ console.log(2 + "2"); // also type coercion, becomes 22
 console.log(2 - "2"); // does math...
 console.log(`my horse babies names are ${horseName} and ${horseNameTwo } they are both ${horseAge } years old i love them`);
 console.log(`if you want to purchase a spot in my stable, the fee is ${STABLE_MONTHLY_FEE} carrots. peeled and cut into squares.`)
+console.log("69");
