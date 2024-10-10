@@ -1,12 +1,12 @@
 // LESSON-3 Code
 let horseName = "blargle";
 console.log(horseName);
-horseNameTwo = "glarble";
+let horseNameTwo = "glarble";
 console.log(horseNameTwo);
 let horseAge = 6900;
 console.log(horseAge);
-let isHorseInside = true;
-console.log(isHorseInside);
+//let isHorseInside = true;
+//console.log(isHorseInside);
 
 // LESSON-4 Code
 console.log(typeof horseName);
@@ -30,3 +30,9 @@ let discount = STABLE_MONTHLY_FEE * 3 *.10;
 
 console.log(`my horse's name is ${horseName} and his nickname is ${horseNickname}`);
 console.log(`you can save $${discount} if you stay for 3 months`)
+
+// LAB 5a
+let isHorseInside = true;
+if(horseName === "blargle" && isHorseInside !== false){
+    console.log(`${horseName} is inside because he hates going outside, but my second horse ${horseNameTwo} loves going outside.`);}
+    else{console.log(`the horse that's outside is ${horseNameTwo}. Not ${horseName}`);}
