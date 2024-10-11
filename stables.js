@@ -36,3 +36,34 @@ let isHorseInside = true;
 if(horseName === "blargle" && isHorseInside !== false){
     console.log(`${horseName} is inside because he hates going outside, but my second horse ${horseNameTwo} loves going outside.`);}
     else{console.log(`the horse that's outside is ${horseNameTwo}. Not ${horseName}`);}
+
+// Lesson 6 Work
+//let word = "Rainbow"; 
+//console.log(word.charAt(4)); //indexes always start at 0!! 
+//console.log(word.charAt(0)); //a 7 letter word only has 6 indexes because it starts at 0
+
+let horseNames = [horseName, horseNameTwo, "plargle", "john"];
+let horseAges = [horseAge, horseAge, 73241934843, 3];
+let horseLocations = [true, true, true, true]; 
+console.log(horseNames.length);
+horseNames.push("sploochie"); //will "push" the string into the array to the end
+horseAges.push("88");
+horseLocations.push(true);
+
+//console.log(`Welcome to Weenie Stables! There are ${horseNames.length} horses staying here. Their names are ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}, ${horseNames[3]}, and ${horseNames[4]}`);
+
+if(horseNames[0] === horseName){
+    console.log(`hi ${horseNickname}!`);
+}
+
+if(horseNames.length < 3){
+    console.log(`No one likes Weenie Stables!`)}
+    else{console.log(`everyone and their horses love Weenie Stables!`)}
+
+//LAB 6 Work
+console.log(`Welcome to Weenie Stables! There are ${horseNames.length} horses staying here. Their names are ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}, ${horseNames[3]}, and ${horseNames[4]}`);
+
+if(horseLocations[0] && horseLocations[1] && horseLocations[2] && horseLocations[3] && horseLocations[4] === true){
+    console.log(`all ${horseNames.length} horses are inside!`);}
+    else{console.log(`THE HORSES ALL RAN AWAY OMG PANIC`);
+    }
