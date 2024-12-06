@@ -1,69 +1,286 @@
-// LESSON-3 Code
-let horseName = "blargle";
-console.log(horseName);
-let horseNameTwo = "glarble";
-console.log(horseNameTwo);
-let horseAge = 6900;
-console.log(horseAge);
-//let isHorseInside = true;
-//console.log(isHorseInside);
+//
+//
+//          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX     
+//          X         X         X         X         X  |\    /X         X         X     
+//          X         X         X         X         X   ___| \X,/_/     X         X     
+//          X         X         X         X         X---__/ \/X   \     X         X     
+//          X         X         X         X         X_--/     XD)  \    X         X     
+//          X         X         X         X         X -/    (_X     \   X         X     
+//          X         X         X         X        /X /       X_ /  -\  X         X     
+//          X         X      __-X-----____X--___--/ X         X \_ O o) X         X     
+//          X         X     /   X         X         X         X   \__/  X         X     
+//          X         X    /    X         X         X        /X         X         X     
+//          X         X   ||    X     )   X         X     \_/\X         X         X     
+//          X         X   ||    X    /    X         X      /  X         X         X     
+//          X         X   | |   X  /--____X_      __X\    /\  X         X         X     
+//          X         X   | /   X_-  - _/ X ------  X |  |   \X\        X         X     
+//          X         X    |   -X -   /   X         X  | |    X\ )      X         X     
+//          X         X    |  | X -  |    X         X  | )    X| |      X         X     
+//          X         X     | | X  | |    X         X  | |    X |       X         X     
+//          X         X     | | X  < |    X         X  | |   |X/        X         X     
+//          X         X     < | X  /__\   X         X  <  \   X         X         X     
+//          X         X     /__\X         X         X  /___\  X         X         X     
+//          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  
+//
+//
 
-// LESSON-4 Code
-console.log(typeof horseName);
-console.log(typeof horseAge);
-const STABLE_MONTHLY_FEE = 1000; // uppercase is preferred for constants
-console.log(STABLE_MONTHLY_FEE); 
+//------------------------- Seting up shop -------------------------//
 
-console.log(STABLE_MONTHLY_FEE * 3);
-console.log(STABLE_MONTHLY_FEE - 49);
-console.log(44/87);
-console.log("skibidi" + " toilet");
-console.log("four" + 20); // example of type coercion 
-console.log(2 + "2"); // also type coercion, becomes 22
-console.log(2 - "2"); // does math...
-console.log(`my horse babies names are ${horseName} and ${horseNameTwo } they are both ${horseAge } years old i love them`);
-console.log(`if you want to purchase a spot in my stable, the fee is ${STABLE_MONTHLY_FEE} carrots. peeled and cut into squares.`)
+let horses = [];
+let visitorMessage = "Welcome to Yorkum's Criminal Stables! YEEEE HAW! F THEM LAWS!!";
+let lateFeePerDay = 3000000;
+let availableJailStalls = 10;
 
-// LAB 4 Work
-let horseNickname = "blargie baby"
-let discount = STABLE_MONTHLY_FEE * 3 *.10;
+console.log(visitorMessage);
 
-console.log(`my horse's name is ${horseName} and his nickname is ${horseNickname}`);
-console.log(`you can save $${discount} if you stay for 3 months`)
+//------------------------- First day -------------------------//
 
-// LAB 5a
-let isHorseInside = true;
-if(horseName === "blargle" && isHorseInside !== false){
-    console.log(`${horseName} is inside because he hates going outside, but my second horse ${horseNameTwo} loves going outside.`);}
-    else{console.log(`the horse that's outside is ${horseNameTwo}. Not ${horseName}`);}
+function nastyBoysCreator (name, nickname, favoriteTreat, age, monthlyRent, isInside, talent, felonyCommitted){
+    this.name = name,
+    this.nickname = nickname,
+    this.favoriteTreat = favoriteTreat,
+    this.age = age,
+    this.monthlyRent = monthlyRent,
+    this.isInside = isInside,
+    this.talent = talent,
+    this.felonyCommitted = felonyCommitted,
 
-// Lesson 6 Work
-//let word = "Rainbow"; 
-//console.log(word.charAt(4)); //indexes always start at 0!! 
-//console.log(word.charAt(0)); //a 7 letter word only has 6 indexes because it starts at 0
+    this.introduction = function () {
+        return `Woah who's that! Oh I see, it's ${name} or as we call him, ${nickname}. ${name} loves eating ${favoriteTreat} and his secret talent is ${talent}. Fun fact, ${name} has committed ${felonyCommitted}.`;
+    };
 
-let horseNames = [horseName, horseNameTwo, "plargle", "john"];
-let horseAges = [horseAge, horseAge, 73241934843, 3];
-let horseLocations = [true, true, true, true]; 
-console.log(horseNames.length);
-horseNames.push("sploochie"); //will "push" the string into the array to the end
-horseAges.push("88");
-horseLocations.push(true);
+    this.toggleLocation = function() {
+        if (this.isInside === true) {
+            this.isInside = false;
+            console.log(`${this.name} needs some fresh air.`);
+        } else {
+            this.isInside = true;
+            console.log(`${this.name} has come back for a nap`);
+         }
+     };
+};
 
-//console.log(`Welcome to Weenie Stables! There are ${horseNames.length} horses staying here. Their names are ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}, ${horseNames[3]}, and ${horseNames[4]}`);
+const blargle = new nastyBoysCreator ("blargle", "blargie baby", "the blood of his enemies", 74, 800, true, "juggling", "arson");
+const glarble = new nastyBoysCreator ("glarble", "lil glarb", "sponges", 140, 801, false, "freestyle rap", "public indecency");
+const sploochie = new nastyBoysCreator ("sploochie", "johnathan", "forks", 900, 799, true, "d1 accounting", "tax fraud");
 
-if(horseNames[0] === horseName){
-    console.log(`hi ${horseNickname}!`);
-}
+blargle.introduction();
 
-if(horseNames.length < 3){
-    console.log(`No one likes Weenie Stables!`)}
-    else{console.log(`everyone and their horses love Weenie Stables!`)}
+function introduceHorses(nastyBoy) {
+    return `Oh and if you take a look over yonder, it's ${nastyBoy.name}, also known as ${nastyBoy.nickname}. ${nastyBoy.name} loves to ${nastyBoy.talent} while munching on some ${nastyBoy.favoriteTreat}. Not so fun fact, ${nastyBoy.name} has committed ${nastyBoy.felonyCommitted}... stay away.`
+};
 
-//LAB 6 Work
-console.log(`Welcome to Weenie Stables! There are ${horseNames.length} horses staying here. Their names are ${horseNames[0]}, ${horseNames[1]}, ${horseNames[2]}, ${horseNames[3]}, and ${horseNames[4]}`);
+console.log(introduceHorses(glarble));
 
-if(horseLocations[0] && horseLocations[1] && horseLocations[2] && horseLocations[3] && horseLocations[4] === true){
-    console.log(`all ${horseNames.length} horses are inside!`);}
-    else{console.log(`THE HORSES ALL RAN AWAY OMG PANIC`);
+horses.push(blargle, glarble, sploochie);
+
+const newNastyBoy = {
+    name: "snozzborg",
+    nickname: "borg",
+    favoriteTreat: "gum wrappers",
+    age: 10,
+    monthlyRent: 2000,
+    isInside: false,
+    talent: "doing a little jig",
+    felonyCommitted: "armed robbery",
+    toggleLocation: function() {
+        if (this.isInside === true) {
+            this.isInside = false;
+            console.log(`${this.name} needs some fresh air.`);
+        } else {
+            this.isInside = true;
+            console.log(`${this.name} has come back for a nap`);
+         }
+     }
+};
+
+horses.push(newNastyBoy);
+
+blargle.isHungry = true;
+glarble.isHungry = false;
+sploochie.isHungry = true;
+newNastyBoy.isHungry = false;
+
+horses.forEach(function(nastyBoy) {
+    if (nastyBoy.isHungry) {
+        console.log(`${nastyBoy.name} is starving! Feed them before they commit another crime!`);
+    } else {
+        console.log(`${nastyBoy.name} is not hungry... Don't ask what they ate beforehand.`);
     }
+});
+
+//------------------------- Stable roster -------------------------//
+
+//   name: "blargle",
+//   nickname: "blargie baby",
+//   favoriteTreat: "the blood of his enemies",
+//   age: 74,
+//   monthlyRent: 800,
+//   isInside: true,
+//   talent: "juggling",
+//   felonyCommitted: "arson",
+//   isHungry: true,
+//   introduction: function () {
+//     return `Woah who's that! Oh I see, it's ${this.name} or as we call him, ${this.nickname}. ${this.name} loves eating ${this.favoriteTreat} and his secret talent is ${this.talent}. Fun fact, ${this.name} has committed ${this.felonyCommitted}.`;
+//   toggleLocation: function() {
+//     if (this.isInside === true) {
+//         this.isInside = false;
+//         console.log(`${this.name} needs some fresh air.`);
+//     } else {
+//         this.isInside = true;
+//         console.log(`${this.name} has come back for a nap`);
+//      }
+//  }
+//
+//   name: "glarble",
+//   nickname: "lil glarb",
+//   favoriteTreat: "sponges",
+//   age: 140,
+//   monthlyRent: 801,
+//   isInside: false,
+//   talent: "freestyle rap",
+//   felonyCommitted: "public indecency",
+//   isHungry: false,
+//   introduction: function () {
+//     return `Woah who's that! Oh I see, it's ${this.name} or as we call him, ${this.nickname}. ${this.name} loves eating ${this.favoriteTreat} and his secret talent is ${this.talent}. Fun fact, ${this.name} has committed ${this.felonyCommitted}.`;
+//   toggleLocation: function() {
+//     if (this.isInside === true) {
+//         this.isInside = false;
+//         console.log(`${this.name} needs some fresh air.`);
+//     } else {
+//         this.isInside = true;
+//         console.log(`${this.name} has come back for a nap`);
+//      }
+//  }
+//
+//   name: "sploochie",
+//   nickname: "johnathan",
+//   favoriteTreat: "forks",
+//   age: 900,
+//   monthlyRent: 799,
+//   isInside: true,
+//   talent: "accounting",
+//   felonyCommitted: "tax fraud",
+//   isHungry: true,
+//   introduction: function () {
+//     return `Woah who's that! Oh I see, it's ${this.name} or as we call him, ${this.nickname}. ${this.name} loves eating ${this.favoriteTreat} and his secret talent is ${this.talent}. Fun fact, ${this.name} has committed ${this.felonyCommitted}.`;
+//   toggleLocation: function() {
+//     if (this.isInside === true) {
+//         this.isInside = false;
+//         console.log(`${this.name} needs some fresh air.`);
+//     } else {
+//         this.isInside = true;
+//         console.log(`${this.name} has come back for a nap`);
+//      }
+//  }
+//
+//   name: "snozzborg",
+//   nickname: "borg",
+//   favoriteTreat: "cucumber",
+//   age: 10,
+//   monthlyRent: 2000,
+//   isInside: false,
+//   talent: "doing a little jig",
+//   felonyCommitted: "armed robbery",
+//   isHungry: false,
+//   toggleLocation: function() {
+//     if (this.isInside === true) {
+//         this.isInside = false;
+//         console.log(`${this.name} needs some fresh air.`);
+//     } else {
+//         this.isInside = true;
+//         console.log(`${this.name} has come back for a nap`);
+//      }
+//  }
+
+//---------------------- Growing business ----------------------//
+
+let updatedJailStalls = availableJailStalls - horses.length;
+
+if (updatedJailStalls < 2) {
+    console.log(`We need to build more stalls!!`);
+} else {
+    console.log(`We have ${updatedJailStalls} jail stalls available!`);
+};
+
+function lateFeeCalculation(nastyBoy, lateDays) {
+    const totalLateFee = lateDays * lateFeePerDay;
+    const totalOwed = nastyBoy.monthlyRent + totalLateFee;
+    console.log(`${nastyBoy.name}! You are ${lateDays} days late on your rent! You now owe $${totalOwed}.`);
+};
+
+lateFeeCalculation(glarble, 5);
+
+function findHorseThatLikesTreat(treat) {
+    for (let i = 0; i < horses.length; i++) {
+        if (horses[i].favoriteTreat === treat) {
+            console.log(`${horses[i].name} absolutely loves to munch on ${treat}! YIIPPEEE`);
+            break; 
+        } else {
+            console.log(`uh oh... ${horses[i].name} actually hates eating ${treat}. Moving on...`);
+        }
+    }
+};
+
+findHorseThatLikesTreat("gum wrappers");
+findHorseThatLikesTreat("the blood of his enemies");
+
+function getNastyBoyNickname(nastyBoy) {
+    return `${nastyBoy.name}'s nickname is ${nastyBoy.nickname}`;
+};
+
+console.log(`${getNastyBoyNickname(sploochie)}`);
+
+//------------------------- Day to day operations -------------------------//
+
+function talentShow(stars) {
+    console.log("Welcome to the Yorkum's Jail Stables' Talent Show!");
+    for (let i = 0; i < stars.length; i++) {
+        const nastyBoy = stars[i];
+        console.log("Now presenting..." + nastyBoy.name + "! He will be performing: " + nastyBoy.talent);
+    }
+};
+
+talentShow(horses);
+
+function timeOfDay(nastyBoy, isGettingDark) {
+    if (nastyBoy.isInside && !isGettingDark) {
+        nastyBoy.isInside = false;
+        console.log(`${nastyBoy.name} has been dragged out of his cell. He needs vitamin D.`);
+    } else if (!nastyBoy.isInside && isGettingDark) {
+        nastyBoy.isInside = true;
+        console.log(`${nastyBoy.name}! the sun is setting!!! get back inside!`);
+    }
+}; 
+
+console.log("RISE AND SHINE NASTIES");
+horses.forEach(function(nastyBoy) {
+    timeOfDay(nastyBoy, false); 
+});
+
+blargle.toggleLocation();
+newNastyBoy.toggleLocation();
+
+function feedingHour() {
+        console.log("IT'S MUNCH O' CLOCK NASTY BOYS");
+        horses.forEach(function(nastyBoy) {
+            if (nastyBoy.isInside === false) {
+                nastyBoy.isInside = true;
+                console.log(`${nastyBoy.name} is still outside! ring the dinner bell!`);
+            } else {
+                console.log(`${nastyBoy.name} is already inside, ready for their treat.`);
+            }
+            console.log(`${nastyBoy.name} gets their favorite treat: ${nastyBoy.favoriteTreat}!`);
+        });
+    };
+
+feedingHour(horses);
+
+horses.forEach(function(nastyBoy) {
+    nastyBoy.toggleLocation();
+});
+
+console.log("NIGHT NIGHT NASTIES");
+horses.forEach(function(nastyBoy) {
+    timeOfDay(nastyBoy, true); 
+});
